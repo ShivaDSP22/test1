@@ -1,0 +1,59 @@
+[1mdiff --git a/phinx.php b/phinx.php[m
+[1mindex bc2a976..d19dae6 100644[m
+[1m--- a/phinx.php[m
+[1m+++ b/phinx.php[m
+[36m@@ -1,53 +1,9 @@[m
+[31m-<?php[m
+[31m-[m
+[31m-/*[m
+[31m- * This file is part of Jitamin.[m
+[31m- *[m
+[31m- * Copyright (C) Jitamin Team[m
+[31m- *[m
+[31m- * For the full copyright and license information, please view the LICENSE[m
+[31m- * file that was distributed with this source code.[m
+[31m- */[m
+[31m-[m
+[31m-/*[m
+[31m-|--------------------------------------------------------------------------[m
+[31m-| Please DO NOT modify me.[m
+[31m-|--------------------------------------------------------------------------[m
+ */[m
+ // Register The Auto Loader[m
+[32m+[m[32m//added[m
+ require __DIR__.'/bootstrap/autoload.php';[m
+ [m
+ $db = require __DIR__.'/config/config.php';[m
+ [m
+ return [[m
+     'paths' => [[m
+[31m-        'migrations' => 'database/migrations',[m
+[31m-        'seeds'      => 'database/seeds',[m
+[31m-    ],[m
+[31m-    'environments' => [[m
+[31m-        'default_migration_table' => 'migrations',[m
+[31m-        'default_database'        => $db['db_driver'],[m
+[31m-        'mysql'                   => [[m
+[31m-            'adapter' => 'mysql',[m
+[31m-            'host'    => $db['db_connections']['mysql']['host'],[m
+[31m-            'name'    => $db['db_connections']['mysql']['database'],[m
+[31m-            'user'    => $db['db_connections']['mysql']['username'],[m
+[31m-            'pass'    => $db['db_connections']['mysql']['password'],[m
+[31m-            'port'    => $db['db_connections']['mysql']['port'],[m
+[31m-            'charset' => 'utf8',[m
+[31m-        ],[m
+[31m-        'pgsql' => [[m
+[31m-            'adapter' => 'pgsql',[m
+[31m-            'host'    => $db['db_connections']['pgsql']['host'],[m
+[31m-            'name'    => $db['db_connections']['pgsql']['database'],[m
+[31m-            'user'    => $db['db_connections']['pgsql']['username'],[m
+[31m-            'pass'    => $db['db_connections']['pgsql']['password'],[m
+[31m-            'port'    => $db['db_connections']['pgsql']['port'],[m
+[31m-            'charset' => 'utf8',[m
+[31m-        ],[m
+[31m-        'sqlite' => [[m
+[31m-            'adapter' => 'sqlite',[m
+[31m-            'name'    => $db['db_connections']['sqlite']['database'],[m
+[31m-        ],[m
+[31m-    ],[m
+[31m-];[m
